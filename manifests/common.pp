@@ -32,7 +32,7 @@ class gocd::common (
     contain '::gocd::common::repository'
   }
 
-  # if $manage_user {
-  #   contain '::gocd::common::user'
-  # }
+  if $manage_user {
+    contain '::gocd::common::user'
+  }
 }
