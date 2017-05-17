@@ -18,7 +18,7 @@
 class gocd::common::user (
   $user    = 'go',
   $group   = 'go',
-  $home    = '/var/go',
+  $home    = '/home/go',
   $comment = 'GoCD User',
 ) {
   if $::gocd::common::manage_daemon_user {
@@ -28,7 +28,7 @@ class gocd::common::user (
       owner  => $user,
       group  => $group,
     }
-    
+
     user { $user:
       ensure  => present,
       comment => $comment,
